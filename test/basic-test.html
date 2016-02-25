@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="./fake-store.html">
+  </head>
+  <body>
+
+    <test-fixture id="fake-store-fixture">
+      <template>
+        <fake-store></fake-store>
+      </template>
+    </test-fixture>
+
+    <script>
+      describe('<finterface-key-value-store>', function() {
+
+        var el;
+
+        beforeEach(function() {
+          el = fixture('fake-store-fixture');
+        });
+
+        it('reflects key property to attribute', function() {
+          el.key = 'someKey';
+          expect(el.getAttribute('key')).to.equal('someKey');
+        });
+
+        it('notifies about value change', function(done) {
+          el.addEventListener('value-changed', () => done());
+          el.value = 'someval';
+        });
+
+      });
+    </script>
+
+  </body>
+</html>
