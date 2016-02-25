@@ -1,0 +1,35 @@
+{
+  "name": "finterface-key-value-store",
+  "authors": [
+    "Martynas <martynas@firmfirm.co>"
+  ],
+  "description": "Polymer Behavior exposing public interface of any element that is a key-value store",
+  "keywords": [
+    "polymer",
+    "behavior",
+    "interface"
+  ],
+  "main": "finterface-key-value-store.html",
+  "homepage": "https://github.com/firmfirm/finterface-key-value-store/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^4.0.0"
+  },
+  "_release": "76d5e108de",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "76d5e108dede9556ccbb05d95681990485ae9f9b"
+  },
+  "_source": "git@github.com:firmfirm/finterface-key-value-store.git",
+  "_target": "master",
+  "_originalSource": "git@github.com:firmfirm/finterface-key-value-store",
+  "_direct": true
+}
