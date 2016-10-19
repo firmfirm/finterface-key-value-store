@@ -1,0 +1,8 @@
+<link rel="import" href="../finterface-key-value-store.html">
+
+<script>
+  class FakeStore extends FInterface.KeyValueStore(Polymer.Element) {
+    static get is() { return 'fake-store'; }
+  }
+  customElements.define(FakeStore.is, FakeStore);
+</script>

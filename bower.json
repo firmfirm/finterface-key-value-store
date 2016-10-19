@@ -19,7 +19,8 @@
   "dependencies": {
     "polymer": "Polymer/polymer#2.0-preview"
   },
-  "resolutions": {
-    "webcomponentsjs": "v1"
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#v1",
+    "web-component-tester": "Polymer/web-component-tester#^4.3.5"
   }
 }
