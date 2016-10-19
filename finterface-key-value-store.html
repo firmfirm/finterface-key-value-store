@@ -1,3 +1,5 @@
+<link rel="import" href="../polymer/polymer.html">
+
 <script>
 
 window.FInterface = window.FInterface || {};
@@ -9,24 +11,30 @@ window.FInterface = window.FInterface || {};
  *
  * @polymerBehavior
  */
-FInterface.KeyValueStore = {
-  properties: {
-    /*
-     * Key of stored object
-     */
-    key: {
-      type: String,
-      reflectToAttribute: true
-    },
+FInterface.KeyValueStore = Polymer.Utils.dedupingMixin(function(superClass) {
+  return class FKeyValueStore extends superClass {
+    static get config() {
+      return {
+        properties: {
+          /*
+           * Key of stored object
+           */
+          key: {
+            type: String,
+            reflectToAttribute: true
+          },
 
-    /*
-     * Stored object
-     */
-    value: {
-      type: Object,
-      notify: true
+          /*
+           * Stored object
+           */
+          value: {
+            type: Object,
+            notify: true
+          }
+        }
+      }
     }
   }
-}
+});
 
 </script>

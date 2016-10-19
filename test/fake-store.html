@@ -1,11 +1,10 @@
 <link rel="import" href="../finterface-key-value-store.html">
-<link rel="import" href="../../polymer/polymer.html">
 
 <dom-module id="fake-store">
   <script>
-    Polymer({
-      is: 'fake-store',
-      behaviors: [FInterface.KeyValueStore]
-    });
+    class FakeStore extends FInterface.KeyValueStore(Polymer.Element) {
+      static get is() { return 'fake-store'; }
+    }
+    customElements.define(FakeStore.is, FakeStore);
   </script>
 </dom-module>
