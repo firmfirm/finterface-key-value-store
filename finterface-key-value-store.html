@@ -11,28 +11,26 @@ window.FInterface = window.FInterface || {};
  *
  * @polymerBehavior
  */
-FInterface.KeyValueStore = Polymer.Utils.dedupingMixin(function(superClass) {
+FInterface.KeyValueStore = Polymer.dedupingMixin(function(superClass) {
   return class FKeyValueStore extends superClass {
-    static get config() {
+    static get properties() {
       return {
-        properties: {
-          /*
-           * Key of stored object
-           */
-          key: {
-            type: String,
-            reflectToAttribute: true
-          },
+        /*
+         * Key of stored object
+         */
+        key: {
+          type: String,
+          reflectToAttribute: true
+        },
 
-          /*
-           * Stored object
-           */
-          value: {
-            type: Object,
-            notify: true
-          }
-        }
-      }
+        /*
+         * Stored object
+         */
+        value: {
+          type: Object,
+          notify: true
+        },
+      };
     }
   }
 });
