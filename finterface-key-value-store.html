@@ -9,10 +9,13 @@ window.FInterface = window.FInterface || {};
  *
  * To be used in key-value stores, their wrappers, stubs or replacements.
  *
- * @polymerBehavior
+ * @polymerMixin
  */
 FInterface.KeyValueStore = Polymer.dedupingMixin(function(superClass) {
-  return class FKeyValueStore extends superClass {
+  /**
+   * @polymerMixinClass
+   */
+  class FKeyValueStore extends superClass {
     static get properties() {
       return {
         /*
@@ -33,6 +36,7 @@ FInterface.KeyValueStore = Polymer.dedupingMixin(function(superClass) {
       };
     }
   }
+  return FKeyValueStore;
 });
 
 </script>
