@@ -19,7 +19,7 @@
     "polymer": "~2.0.0"
   },
   "devDependencies": {
-    "webcomponentsjs": "v1.0.0-rc.11",
-    "web-component-tester": "v6.0.0-prerelease.10"
+    "webcomponentsjs": "v1.0.0",
+    "web-component-tester": "v6.0.0"
   }
 }
