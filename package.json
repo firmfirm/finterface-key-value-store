@@ -1,7 +1,7 @@
 {
   "name": "finterface-key-value-store",
   "description": "Polymer Behavior exposing public interface of any element that is a key-value store",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "scripts": {
     "test": "polymer test --npm --module-resolution=node"
   },
