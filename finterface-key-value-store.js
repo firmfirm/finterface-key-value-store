@@ -1,6 +1,5 @@
-<link rel="import" href="../polymer/polymer.html">
-
-<script>
+import '@polymer/polymer/polymer-legacy.js';
+import { dedupingMixin } from '@polymer/polymer/lib/utils/mixin.js';
 
 window.FInterface = window.FInterface || {};
 
@@ -11,7 +10,7 @@ window.FInterface = window.FInterface || {};
  *
  * @polymerMixin
  */
-FInterface.KeyValueStore = Polymer.dedupingMixin(function(superClass) {
+FInterface.KeyValueStore = dedupingMixin(function(superClass) {
   /**
    * @polymerMixinClass
    */
@@ -38,5 +37,3 @@ FInterface.KeyValueStore = Polymer.dedupingMixin(function(superClass) {
   }
   return FKeyValueStore;
 });
-
-</script>

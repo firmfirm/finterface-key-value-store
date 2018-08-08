@@ -1,25 +1,24 @@
 {
   "name": "finterface-key-value-store",
-  "authors": [
-    "Martynas <martynas@firmfirm.co>"
-  ],
   "description": "Polymer Behavior exposing public interface of any element that is a key-value store",
+  "version": "2.5.0",
+  "scripts": {
+    "test": "polymer test --npm --module-resolution=node"
+  },
   "keywords": [
     "polymer",
     "behavior",
     "interface"
   ],
-  "main": "finterface-key-value-store.html",
   "homepage": "https://github.com/firmfirm/finterface-key-value-store/",
-  "ignore": [
-    "/.*",
-    "/test/"
-  ],
+  "license": "BSD-3-Clause",
+  "main": "finterface-key-value-store.js",
+  "author": "Martynas <martynas@firmfirm.co>",
   "dependencies": {
-    "polymer": "~2.0.0"
+    "@polymer/polymer": "^3.0.0"
   },
   "devDependencies": {
-    "webcomponentsjs": "v1.0.0",
-    "web-component-tester": "v6.0.0"
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.1"
   }
 }

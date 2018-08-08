@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script src="../../wct-browser-legacy/browser.js"></script>
 
-    <link rel="import" href="../test-helper/fake-store.html">
+    <script type="module" src="../test-helper/fake-store.js"></script>
   </head>
   <body>
 
@@ -17,27 +17,28 @@
       </template>
     </test-fixture>
 
-    <script>
-      describe('<finterface-key-value-store>', function() {
+    <script type="module">
+import '../test-helper/fake-store.js';
+describe('<finterface-key-value-store>', function() {
 
-        var el;
+  var el;
 
-        beforeEach(function() {
-          el = fixture('fake-store-fixture');
-        });
+  beforeEach(function() {
+    el = fixture('fake-store-fixture');
+  });
 
-        it('reflects key property to attribute', function() {
-          el.key = 'someKey';
-          expect(el.getAttribute('key')).to.equal('someKey');
-        });
+  it('reflects key property to attribute', function() {
+    el.key = 'someKey';
+    expect(el.getAttribute('key')).to.equal('someKey');
+  });
 
-        it('notifies about value change', function(done) {
-          el.addEventListener('value-changed', () => done());
-          el.value = 'someval';
-        });
+  it('notifies about value change', function(done) {
+    el.addEventListener('value-changed', () => done());
+    el.value = 'someval';
+  });
 
-      });
-    </script>
+});
+</script>
 
   </body>
 </html>
